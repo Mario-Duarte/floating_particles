@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  
+
     <div class="particles-wrapper">
       <div  class="particles floating-bubbles"></div>
     </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/particles.min.js"></script>
     <script type="text/javascript" src="js/main.min.js"></script>
   </body>
 </html>
