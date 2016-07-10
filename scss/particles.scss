@@ -1,0 +1,87 @@
+@keyframes bubbles-soda {
+   0% {
+      opacity: 0;
+   }
+   20% {
+      opacity: 1;
+      transform:translate(0, -20%);
+   }
+   100% {
+      opacity: 0;
+      transform:translate(0, -1000%);
+   }
+}
+
+@for $i from 1 through 100 {
+  @keyframes bubbles-floating-#{$i} {
+    0% {
+      opacity: 0;
+      transform:translate(random(50) + % , random(50) + %);
+    }
+    25% {
+      opacity: 1;
+      transform:translate( random(50) - 100 + % , random(50) + %);
+    }
+    50% {
+      opacity: 0;
+      transform:translate( random(200) - 100 + % , random(200) - 100 + %);
+    }
+    75% {
+      opacity: 1;
+      transform:translate( random(500) + % , random(1000) - 500 + %);
+    }
+    100% {
+      opacity: 0;
+      transform:translate( random(2000) - 1000 + % , random(2000) - 1000 + %);
+    }
+  }
+}
+
+.particles.bubbles {
+  position: relative;
+  width: 100%;
+  height: 99vh;
+  display: inline-block;
+  overflow: hidden;
+  background: #fefefe;
+  background: -webkit-linear-gradient(rgba(33,150,243,0.2), #fefefe);
+  background: -o-linear-gradient(rgba(33,150,243,0.2), #fefefe);
+  background: -moz-linear-gradient(rgba(33,150,243,0.2), #fefefe);
+  background: linear-gradient(rgba(33,150,243,0.2), #fefefe);
+
+  .particle {
+    opacity:0;
+    position: absolute;
+    background-color:rgba(33,150,243,0.5);
+    animation-name: bubbles-soda;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+    border-radius:100%;
+  }
+}
+
+.particles.floating-bubbles {
+  position: relative;
+  width: 100%;
+  height: 99vh;
+  display: inline-block;
+  overflow: hidden;
+
+  .particle {
+    opacity:0;
+    position: absolute;
+    background-color:rgba(33,150,243,0.5);
+    animation-duration: random(120) + s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forward;
+    border-radius:100%;
+    @for $i from 1 through 100 {
+      &.particle-#{$i} {
+        animation-name: bubbles-floating-#{$i};
+      }
+    }
+
+  }
+
+}

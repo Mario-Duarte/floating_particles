@@ -1,7 +1,5 @@
 node_modules
 .git/
 .idea/
-scripts/
-scss/
 Gulpfile.js
 package.json
