@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floating Particles</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/particles.css">
   </head>
   <body>
 
