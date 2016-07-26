@@ -3,6 +3,8 @@
 Create random floating particles using js and css, create up to 100 particles with random initial positions, sizes and delays using javascript.
 Change shape and colour of particle on the scss, 100 different and randomly generated animations that are applied to each particle created resulting on a different result every time the page is loaded.
 
+[Live Demo] (https://jsfiddle.net/MarioDesigns/suLfkpf4/)
+
 ## Dependencies
 
 - [jQuery 3.0.0] (https://api.jquery.com/)
